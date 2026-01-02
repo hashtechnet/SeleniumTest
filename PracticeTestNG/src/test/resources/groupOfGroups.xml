@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test Social">
+  <groups>
+  	<define name="dailyreport">
+  		<include name="smoke"/>
+  		<include name="unit"/>
+  	</define>
+  	<define name="weeklyreport">
+  		<include name="uat"/>
+  		<include name="unit"/>
+  	</define>
+  	<run>
+  		<include name="weeklyreport"/>
+  	</run>
+  </groups>
+    <classes>
+      <class name="com.tests.TestGroups"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
